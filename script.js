@@ -17,10 +17,10 @@ Function.prototype.safeCall = function(arg) {
 }
 
 function anyFunc (arg) {
-  return JSON.parse(arg)
+  return JSON.parse(arg);
 }
 
-anyFunc.safeCall('abc') //false
+anyFunc.safeCall('abc'); //false
 anyFunc.safeCall('{"name": "Michael", "age": 45}'); //true
 
 safeCall(() => console.log('Hello!')); // true
