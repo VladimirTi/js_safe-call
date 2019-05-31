@@ -1,18 +1,18 @@
 function safeCall (fn) {
   try {
     fn();
-    console.log(true);
+    return true;
   } catch (error) {
-    console.log(false);
+    return false;
   }
 }
 
 Function.prototype.safeCall = function(arg) {
   try {
-    this(arg);
-    console.log(true);
+    const result = this(arg);
+    return result;
   } catch (error) {
-    console.log(false);
+    return null;
   }
 }
 
