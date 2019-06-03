@@ -7,9 +7,9 @@ function safeCall (fn) {
   }
 }
 
-Function.prototype.safeCall = function(arg) {
+Function.prototype.safeCall = function(...arg) {
   try {
-    const result = this(arg);
+    const result = this(...arg);
     return result;
   } catch (error) {
     return null;
